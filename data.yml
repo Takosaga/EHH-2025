@@ -1,6 +1,6 @@
-train: ./yolo_dataset/images/train
-val: ./yolo_dataset/images/val
-test: ./yolo_dataset/images/test
+train: images/train
+val: images/val
+test: images/test
 
 nc: 4  # Number of classes
 names: ["mild_active", "moderate_active", "strong_active", "negative"]
