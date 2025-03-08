@@ -7,6 +7,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import random
 import uvicorn
+import math
 
 app = FastAPI()
 
@@ -36,15 +37,24 @@ async def detect_objects():
         moderate_active_count = random.randint(20, 30)  # Half the strong active
         mild_active_count = random.randint(5, 15)  # Few mild actives
         total_cells = negative_count + strong_active_count + moderate_active_count + mild_active_count
-        actice_cell_percent = round((strong_active_count + moderate_active_count + mild_active_count) / total_cells * 100, 2)
-        
+        total_positive_cells = strong_active_count + moderate_active_count + mild_active_count
+        positive_cells_ratio = math.ceil(total_positive_cells / total_cells * 100)
+        mild_ratio = math.ceil(mild_active_count/total_cells * 100),
+        moderate_ratio = math.ceil(moderate_active_count/total_cells * 100),
+        strong_ratio = math.ceil(strong_active_count/total_cells * 100),
+        negative_ratio = math.ceil(negative_count/total_cells * 100),
         results = {
-            "negative": negative_count,
-            "strong_active": strong_active_count,
-            "moderate_active": moderate_active_count,
-            "mild_active": mild_active_count,
+            "positive_cells": total_positive_cells,
+            "positive_cell_percent": positive_cells_ratio,
+            "mild_positive": mild_active_count,
+            "mild_ratio": mild_ratio[0],
+            "moderate_positive": moderate_active_count,
+            "moderate_ratio": moderate_ratio[0],
+            "strong_positive": strong_active_count,
+            "strong_ratio": strong_ratio[0],
+            "negative_cells": negative_count,
+            "negative_ratio": negative_ratio[0],
             "total_cells": total_cells,
-            "active_cell_percent": actice_cell_percent,
         }
         
         return results
