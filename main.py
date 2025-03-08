@@ -32,10 +32,10 @@ async def detect_objects():
     """
     try:
         # Hardcoded counts with the desired distribution
-        negative_count = random.randint(70, 100)  # Many negatives
-        strong_active_count = random.randint(40, 60)  # Similar to negatives
-        moderate_active_count = random.randint(20, 30)  # Half the strong active
-        mild_active_count = random.randint(5, 15)  # Few mild actives
+        negative_count = random.randint(80, 100)  # Many negatives
+        strong_active_count = random.randint(10, 15)  # Similar to negatives
+        moderate_active_count = random.randint(5, 10)  # Half the strong active
+        mild_active_count = random.randint(0, 5)  # Few mild actives
         total_cells = negative_count + strong_active_count + moderate_active_count + mild_active_count
         total_positive_cells = strong_active_count + moderate_active_count + mild_active_count
         positive_cells_ratio = math.ceil(total_positive_cells / total_cells * 100)
@@ -45,7 +45,7 @@ async def detect_objects():
         negative_ratio = math.ceil(negative_count/total_cells * 100),
         results = {
             "positive_cells": total_positive_cells,
-            "positive_cell_percent": positive_cells_ratio,
+            "positive_cell_ratio": positive_cells_ratio,
             "mild_positive": mild_active_count,
             "mild_ratio": mild_ratio[0],
             "moderate_positive": moderate_active_count,
