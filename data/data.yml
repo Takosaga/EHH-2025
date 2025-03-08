@@ -4,3 +4,4 @@ test: images/test
 
 nc: 4  # Number of classes
 names: ["mild_active", "moderate_active", "strong_active", "negative"]
+img_ext: .tiff 
