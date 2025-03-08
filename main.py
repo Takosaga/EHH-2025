@@ -1,6 +1,8 @@
 #pip install fastapi
 #pip install uvicorn
 #uvicorn main:app --reload
+#py client.py
+# http://127.0.0.1:8000/detect_objects/ <- POST works
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import random
