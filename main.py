@@ -1,13 +1,15 @@
-#pip install fastapi
-#pip install uvicorn
+#pip install pillow 
 #uvicorn main:app --reload
 #py client.py
 # http://127.0.0.1:8000/detect_objects/ <- POST works
+# http://127.0.0.1:8000/image <- GET works
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse, FileResponse
 import random
 import uvicorn
 import math
+
 
 app = FastAPI()
 
@@ -56,8 +58,8 @@ async def detect_objects():
             "negative_ratio": negative_ratio[0],
             "total_cells": total_cells,
         }
-        
-        return results
+        # Return JSON with image URL
+        return JSONResponse(content={"data": results, "image_url": "/image"})
     except Exception as e:
         # Log the error
         print(f"Error in detect_objects: {e}")
@@ -67,6 +69,12 @@ async def detect_objects():
 @app.get("/health")
 async def health_check():
     return {"status": "ok"}
+
+@app.get("/image")
+async def get_image():
+    """Returns the image from the local directory."""
+    img_path = "image.png"
+    return FileResponse(img_path, media_type="image/png")
 
 if __name__ == "__main__":
     print("Starting FastAPI server at http://127.0.0.1:8000")
