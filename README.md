@@ -44,11 +44,14 @@ Our solution is a a modern web app that uses computer vision models to assess Ki
 
 ### Frontend
 
-Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment) created with Reaact + Vile. [Lukáš Černohous](https://github.com/lukascer) worked on the developing the frontend and Mikaela Aframova worked on design and meething with pathologist to unserstand app specifications. More information is provided in his repo.
+Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment) created with Reaact + Vile. [Lukáš Černohous](https://github.com/lukascer) worked on the developing the frontend and Mikaela Aframova worked on design and meeting with pathologist to understand app specifications. More information is provided in his repo.
 
 ### Model Development
 
+Using cvat, Mikaela and I labeled images for training, testing, and validation splits for a yolov11 model
+![](https://github.com/Takosaga/EHH-2025/blob/main/Annotated.png)
 
-Includes the images used and data annotated set up to be used to fine tune [YOLOv11](https://docs.ultralytics.com/models/yolo11/) a pretrained CNN model
+The annotated images to were used to fine tune [YOLOv11](https://docs.ultralytics.com/models/yolo11/) a pretrained CNN model in a google colab. The training notebook is available [here](https://github.com/Takosaga/EHH-2025/blob/main/data/training_model.ipynb)
 
-Along with python files to create API request to call the model and return values of positive and negative cells to front end
+### Backend
+Python was used for the backend using FastAPI to create API request calls to the model and return values of positive and negative cells to front end. 
