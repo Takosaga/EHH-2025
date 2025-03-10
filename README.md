@@ -34,6 +34,10 @@ can mark the tumor area of interest).
 available studies suggest this may have prognostic significance.
 4) Evaluate the distribution of Ki67-positive cells (is the proliferation)
 
+## Solution
+
+Our solution is a a modern web app that uses computer vision models to assess Ki67-positive cells withen an image uploaded by the user.
+[Demo]() 
 
 
 Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment)
