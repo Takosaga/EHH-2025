@@ -37,7 +37,7 @@ available studies suggest this may have prognostic significance.
 ## Solution
 
 Our solution is a a modern web app that uses computer vision models to assess Ki67-positive cells withen an image uploaded by the user.
-[![Play](https://github.com/Takosaga/EHH-2025/blob/main/play.png)](https://github.com/Takosaga/EHH-2025/blob/main/demo.webm)
+[![Play](https://github.com/Takosaga/EHH-2025/blob/main/play.png)](https://youtu.be/4LtwRDbN2_M)
 
 
 Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment)
