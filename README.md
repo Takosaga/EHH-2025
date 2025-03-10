@@ -1,6 +1,12 @@
 # Automated Proliferation Assessment 
 
-Repo for the backend for European Healthcare Hackathon 2025
+This is the repo for the backend for European Healthcare Hackathon 2025
+
+The project aims to address the challenges in assessing the Ki-67 protein—a key marker of cell proliferation used to determine tumor grade and aggressiveness. Traditionally evaluated manually by pathologists, this process can be subjective and imprecise. Our solution leverages computer vision and deep learning to:
+
+- Automatically detect and annotate cells: Identify Ki-67-positive and negative cells in pathology slides.
+- Determine proliferation metrics: Calculate the percentage of Ki-67-positive cells and assess the intensity of positivity (mild, moderate, strong).
+- Facilitate manual adjustments: Allow pathologists to manually select regions of interest to ensure accurate analysis.
 
 ## Problem
 Automated Proliferation Assessment in Neuroendocrine Tumors
