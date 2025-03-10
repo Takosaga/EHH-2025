@@ -42,7 +42,10 @@ Our solution is a a modern web app that uses computer vision models to assess Ki
 
 ## Process
 
-Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment)
+### Frontend
+
+Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment) created with Reaact + Vile. [Lukáš Černohous](https://github.com/lukascer) worked on the developing the frontend and Mikaela Aframova worked on design and meething with pathologist to unserstand app specifications.  
+
 Includes the images used and data annotated set up to be used to fine tune [YOLOv11](https://docs.ultralytics.com/models/yolo11/) a pretrained CNN model
 
 Along with python files to create API request to call the model and return values of positive and negative cells to front end
