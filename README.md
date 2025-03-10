@@ -1,6 +1,6 @@
 # Automated Proliferation Assessment 
 
-This is the repo for the backend for European Healthcare Hackathon 2025
+This is the repo for the backend for European [Healthcare Hackathon 2025](https://www.hackhealth.eu/)
 
 The project aims to address the challenges in assessing the Ki-67 protein—a key marker of cell proliferation used to determine tumor grade and aggressiveness. Traditionally evaluated manually by pathologists, this process can be subjective and imprecise. Our solution leverages computer vision and deep learning to:
 
