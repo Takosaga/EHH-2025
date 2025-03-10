@@ -60,4 +60,4 @@ Using cvat, Mikaela and I labeled images for training, testing, and validation s
 The annotated images to were used to fine tune [YOLOv11](https://docs.ultralytics.com/models/yolo11/) a pretrained CNN model in a google colab. The training notebook is available [here](https://github.com/Takosaga/EHH-2025/blob/main/data/training_model.ipynb)
 
 ### Backend
-Python was used for the backend using FastAPI to create API request calls to the model and return values of positive and negative cells to front end. 
+Python was used for the backend with FastAPI server using Uvicorn to create API request calls to the model and return values of positive and negative cells to front end. 
