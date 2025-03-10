@@ -36,9 +36,11 @@ available studies suggest this may have prognostic significance.
 
 ## Solution
 
-Our solution is a a modern web app that uses computer vision models to assess Ki67-positive cells withen an image uploaded by the user.
+Our solution is a a modern web app that uses computer vision models to assess Ki67-positive cells withen an image uploaded by the user. The image is analyzed by our computer vision model to annotate and count the number of cells from the selected region. 
+
 [![Play](https://github.com/Takosaga/EHH-2025/blob/main/play.png)](https://youtu.be/4LtwRDbN2_M)
 
+## 
 
 Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment)
 Includes the images used and data annotated set up to be used to fine tune [YOLOv11](https://docs.ultralytics.com/models/yolo11/) a pretrained CNN model
