@@ -52,6 +52,8 @@ Our solution is a a modern web app that uses computer vision models to assess Ki
 
 Frontend is avaliable [here](https://github.com/lukascer/Automated-Proliferation-Assessment) created with Reaact + Vile. [Lukáš Černohous](https://github.com/lukascer) worked on the developing the frontend and Mikaela Aframova worked on design and meeting with pathologist to understand app specifications. More information is provided in his repo.
 
+![](https://github.com/Takosaga/EHH-2025/blob/main/frontend_of_app.png)
+
 ### Model Development
 
 Using cvat, Mikaela and I labeled images for training, testing, and validation splits for a yolov11 model
